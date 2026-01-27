@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+#pragma GCC optimize("Ofast")
 
 typedef long long ll;
 typedef long double ld;
