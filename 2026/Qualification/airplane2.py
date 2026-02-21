@@ -1,15 +1,15 @@
 h, w, k = list(map(int, input().split()))
 c = list(map(int, input().split()))
+c.sort()
+gaps = [c[i] - c[i-1] for i in range(1, k)]
 def check(x):
     currow = 1
-    for i in range(1, k):
-        if abs(c[i] - c[i-1]) >= x:
-            continue
-        currow += x - abs(c[i] - c[i-1])
-        if (currow > h):
-            return False
+    for gap in gaps:
+        if gap < x:
+            currow += x - gap
+            if currow > h:
+                return False
     return True
-c.sort()
 lo = 1
 hi = h + w
 ans = -1
