@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+typedef long double ld;
+#define ppf pop_front
+#define ppb pop_back
+#define pf push_front
+#define pb push_back
+#define fr first
+#define sc second
+#define mnto(x,y) x = min(x, (__typeof__(x))y)
+#define mxto(x,y) x = max(x, (__typeof__(x))y)
+#define setval(arr, x) memset(arr, x, sizeof(arr))
+
+int main() {
+  ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+  int n;
+  cin >> n;
+  vector<int> a(n);
+  for (int i =0 ; i < n; ++i) cin >> a[i];
+  sort(a.rbegin(), a.rend());
+  cout << a[0] * a[1];
+}
